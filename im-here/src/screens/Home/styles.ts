@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#131016",
-    padding: 24
+    padding: 24,
   },
   eventName: {
     color: "#FDFCFE",
@@ -42,6 +42,11 @@ export const styles = StyleSheet.create({
     gap: 12,
     marginTop: 36,
     marginBottom: 42,
+  },
+  participantText: {
+    fontSize: 20,
+    color: "#FDFCFE",
+    marginBottom: 28
   },
   listEmptyText: {
     color: "#FFF",

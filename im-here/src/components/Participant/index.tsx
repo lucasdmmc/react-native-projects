@@ -8,7 +8,7 @@ interface ParticipantProps {
 
 export function Participant({ name, onRemove }: ParticipantProps) {
   return (
-    <View style={styles.container}> 
+    <View style={styles.container}>
       <Text style={styles.name}>
         {name}
       </Text>

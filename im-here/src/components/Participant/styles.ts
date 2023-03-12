@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 10
+    marginBottom: 10,
   },
   name: {
     color: "#FFF",
@@ -25,5 +25,5 @@ export const styles = StyleSheet.create({
   buttonText: {
     color: "#FFF",
     fontSize: 24
-  },
+  }
 })

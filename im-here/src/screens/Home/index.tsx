@@ -1,4 +1,3 @@
-import { Plus } from "phosphor-react-native";
 import { useState } from "react";
 import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from "react-native";
 import { Participant } from "../../components/Participant";
@@ -60,6 +59,10 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
+      <Text style={styles.participantText}>
+          Participantes
+      </Text>
+
       <FlatList 
         data={participants}
         keyExtractor={item => item}
@@ -73,7 +76,7 @@ export function Home() {
         )}
         ListEmptyComponent={() => (
           <Text style={styles.listEmptyText}>
-            Você ainda não chamou ninguém para o evento? Adicione participantes a sua lista de presença.
+            Ninguém chegou no evento ainda? Adicione participantes a sua lista de presença.
           </Text>
         )}
       />
