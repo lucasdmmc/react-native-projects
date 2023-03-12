@@ -4,7 +4,7 @@
 
 ## Sobre o projeto
 
-Esse projeto foi desenvolvido com a intuição de ajudar pessoas que está precisando fazer uma lista com o nome de pessoas selecionadas para algum evento. O usuário do aplicativo vai poder adicionar o nome de uma pessoa que está sendo convidada para a ocasião especial. Caso o usuário queira remover o nome de alguém, tem essa funcionalidade disponivel também.
+Esse projeto foi desenvolvido com o objetivo de ajudar pessoas que estão precisando fazer uma lista com o nome de pessoas selecionadas para algum evento. O usuário do aplicativo vai poder adicionar o nome de uma pessoa que está sendo convidada para a ocasião especial. Caso o usuário queira remover o nome de alguém, tem essa funcionalidade disponivel também.
 
 
 ## Funcionalidades
