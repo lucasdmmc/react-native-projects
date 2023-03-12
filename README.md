@@ -1,4 +1,4 @@
-# Projetos feitos em React Native
+# Projetos desenvolvidos em React Native
 
 ### Projeto Im Here
 
