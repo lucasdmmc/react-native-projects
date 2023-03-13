@@ -28,10 +28,12 @@ export const Input = styled(TextInput)`
   flex: 1;
   background: #262626;
   border-radius: 6px;
-  color: #808080;
+  color: #F2F2F2;
 `
 
 export const Button = styled(TouchableOpacity)`
+  height: 52px;
+  width: 52px;
   align-items: center;
   justify-content: center;
   padding: 18px;
@@ -103,6 +105,5 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: "#808080",
     marginTop: 16,
-  }
-
+  },
 })

@@ -14,7 +14,7 @@ import {
 import { PlusCircle } from "phosphor-react-native";
 import { Text, FlatList, Alert, View, Image } from "react-native";
 import { Tasks } from "../../components/Tasks";
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export interface TasksProps {
   description: string
@@ -24,8 +24,11 @@ export interface TasksProps {
 export function Home() {
   const [tasks, setTasks] = useState<TasksProps[]>([])
   const [newTask, setNewTask] = useState({} as TasksProps)
-
   const [finishedTaskCount, setFinishedTaskCount] = useState(0)
+  const [isFocused, setIsFocused] = useState(false)
+
+  const handleFocus = () => setIsFocused(true)
+  const handleBlur = () => setIsFocused(false)
 
   function handleAddTask() {
     const alreadyExistsTask = tasks
@@ -46,7 +49,6 @@ export function Home() {
     setTasks(state => [...state, newTask])
     setNewTask({} as TasksProps)
   }
-
 
   function handleStatusChecked(checked: boolean, index: number) {
     let copyTasks = [...tasks];
@@ -91,10 +93,13 @@ export function Home() {
             onChangeText={(task) => setNewTask({...newTask, description: task})}
             value={newTask.description}
             placeholder="Adicione uma nova tarefa"
-            placeholderTextColor="#808080" 
+            placeholderTextColor="#808080"
+            style={{ borderWidth: isFocused ? 1 : 0 , borderColor: "#5E60CE"}}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
           <Button onPress={handleAddTask}>
-            <PlusCircle size={16} color="#fff" />
+            <PlusCircle size={20} color="#fff" />
           </Button>
         </Form>
       </Container>
