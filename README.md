@@ -4,7 +4,7 @@
 
 Repositório da aplicação: https://github.com/lucasdmmc/react-native-projects/tree/master/im-here
 
-![Screens](https://user-images.githubusercontent.com/104842709/224519987-0f0778eb-571c-4d08-9593-b5f71a5e9e0c.png)
+![Screens](https://user-images.githubusercontent.com/104842709/224878655-02e9559a-f9c8-4209-8a85-b0408f087eab.png)
 
 
 
