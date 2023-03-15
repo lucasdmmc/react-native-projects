@@ -24,5 +24,5 @@ Repositório da aplicação: https://github.com/lucasdmmc/react-native-projects/
 
 `Projeto em desenvolvimento`
 
-![Capa](https://user-images.githubusercontent.com/104842709/225176219-63e5a40c-a89c-4c6f-8599-f7a37ad2df6d.png)
+![daily-diet](https://user-images.githubusercontent.com/104842709/225176947-285dc679-9df2-4683-b9a0-88bd2a969ad2.png)
 
