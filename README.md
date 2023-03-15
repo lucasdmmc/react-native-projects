@@ -16,9 +16,13 @@ Repositório da aplicação: https://github.com/lucasdmmc/react-native-projects/
 
 ### Ignite Teams
 
-`Projeto sendo desenvolvido...`
-
 ![ignite-teams](https://user-images.githubusercontent.com/104842709/224875370-959d4c9a-0640-4872-878b-1492a874862c.png)
 
 Repositório da aplicação: https://github.com/lucasdmmc/react-native-projects/tree/master/ignite-teams
+
+### Daily Diet
+
+`Projeto em desenvolvimento`
+
+![Capa](https://user-images.githubusercontent.com/104842709/225176219-63e5a40c-a89c-4c6f-8599-f7a37ad2df6d.png)
 
