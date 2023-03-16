@@ -1,10 +1,16 @@
 import styled, { css } from "styled-components/native";
+import { StatisticsStyleProps } from "../../components/Percent/styles";
 
-export const Container = styled.View`
-  margin-top: -3px;
+type Props = {
+  type?: StatisticsStyleProps
+}
+
+
+export const Container = styled.View<Props>`
   flex: 1;
-
-  background: ${({ theme }) => theme.COLORS.GREEN_400};
+  margin-top: -3px;
+  background: ${({ theme, type }) => 
+  type === "PRIMARY" ? theme.COLORS.GREEN_400 : theme.COLORS.RED_400 };
    
 `;
 

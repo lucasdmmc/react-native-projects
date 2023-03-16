@@ -3,18 +3,37 @@ import { Container, Content, InDietOrNot, Text } from "./styles";
 import { StatusBar } from "react-native"
 import { useTheme } from "styled-components/native";
 import { StatisticCard } from "../../components/StatisticCard";
-import { View } from "react-native";
+import { StatisticsStyleProps } from "../../components/Percent/styles";
 
-export function Statistics() {
+type StatisticsProps = {
+  type?: StatisticsStyleProps
+}
+
+
+export function Statistics({ type = "PRIMARY" }: StatisticsProps) {
   const { COLORS } = useTheme()
   return (
-    <Container>
-      <StatusBar 
-        backgroundColor={COLORS.GREEN_400}
-        barStyle="dark-content"
-        translucent
-      />
-      <Percent showBackButton/>
+    <Container type="PRIMARY">
+
+      {
+        type &&
+        <StatusBar 
+          backgroundColor={COLORS.GREEN_400}
+          barStyle="dark-content"
+          translucent
+        />
+      }
+
+      
+      {
+        !type &&
+        <StatusBar 
+          backgroundColor={COLORS.RED_400}
+          barStyle="dark-content"
+          translucent
+        />
+      }
+      <Percent showBackButton type="PRIMARY"/>
 
       <Content>
         <Text>Estatísticas gerais</Text>

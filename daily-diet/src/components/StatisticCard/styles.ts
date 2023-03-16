@@ -18,8 +18,7 @@ export const Container = styled.View<StatisticProps>`
 
   ${({ heightType }) => heightType && css`
       height: 107px;
-      min-width: 166px;
-      max-width: 166px;
+      flex: 1;
       padding: 16px;
   `};
 

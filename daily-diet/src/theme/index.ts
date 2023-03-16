@@ -21,9 +21,11 @@ export default {
     RED_700: "#BF3B44"
   },
 
-  
+  "GREEN-700": "#639339",
   "GREEN-400": "#CBE4B4",
   "RED-400": "#F3BABD",
+  "RED-700": "#BF3B44",
+
 
   FONT_FAMILY: {
     REGULAR: "NunitoSans_400Regular",
