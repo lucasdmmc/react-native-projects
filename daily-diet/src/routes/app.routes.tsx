@@ -10,13 +10,13 @@ import { FeedBack } from "../screens/FeedBack";
 
 export function AppRoutes() {
   return (
-    <Navigator>
+    <Navigator screenOptions={{ headerShown: false, }}>
       <Screen name="home" component={Home}/>
-      <Screen name="newmeal" component={NewMeal}/>
-      <Screen name="Statistics" component={Statistics}/>
-      <Screen name="Meal" component={Meal}/>
-      <Screen name="editmeal" component={EditMeal}/>
+      <Screen name="new" component={NewMeal}/>
       <Screen name="feedback" component={FeedBack}/>
+      <Screen name="statistics" component={Statistics}/>
+      <Screen name="meal" component={Meal}/>
+      <Screen name="edit" component={EditMeal}/>
     </Navigator>
   );
 }

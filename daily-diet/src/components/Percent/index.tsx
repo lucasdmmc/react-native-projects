@@ -1,6 +1,7 @@
 import { Container, StatisticsStyleProps, Text, TextPercent } from "./styles";
 import { TouchableOpacityProps } from "react-native"
 import { ButtonIcon } from "../ButtonIcon";
+import { useNavigation } from "@react-navigation/native"
 
 
 type PercentProps = TouchableOpacityProps & {
@@ -9,6 +10,18 @@ type PercentProps = TouchableOpacityProps & {
 }
 
 export function Percent({ type = "PRIMARY", showBackButton = false}: PercentProps) {
+  
+  const { navigate } = useNavigation()
+  
+  function handleGoBack() {
+    navigate("home")
+  }
+
+  function handleStatistics() {
+    navigate("statistics")
+
+  }
+
   return (
     <Container type={type}>
       <TextPercent>90,86%</TextPercent>
@@ -23,6 +36,7 @@ export function Percent({ type = "PRIMARY", showBackButton = false}: PercentProp
           }} 
           icon={"keyboard-backspace"} 
           type={type}
+          onPress={handleGoBack}
           />
           
          : 
@@ -35,6 +49,7 @@ export function Percent({ type = "PRIMARY", showBackButton = false}: PercentProp
           }}
           icon={"call-made"} 
           type={type}
+          onPress={handleStatistics}
         />
       } 
     </Container>

@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components/native";
 import { StatisticsStyleProps } from "../../components/Percent/styles";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 type Props = {
   type?: StatisticsStyleProps
 }
 
 
-export const Container = styled.View<Props>`
+export const Container = styled(SafeAreaView)<Props>`
   flex: 1;
   margin-top: -3px;
   background: ${({ theme, type }) => 

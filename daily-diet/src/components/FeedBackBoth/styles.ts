@@ -1,9 +1,12 @@
 import styled, { css } from "styled-components/native";
 
-export type TitleStyleType = "GREEN" | "RED"
+const TITLE_COLOR = {
+  green: "GREEN-700",
+  red: "RED-700",
+} as const
 
 type TitleProps = {
-  type?: TitleStyleType
+  titleColor: keyof typeof TITLE_COLOR
 }
 
 export const Container = styled.View`
@@ -14,12 +17,11 @@ export const Container = styled.View`
 `;
 
 export const Title = styled.Text<TitleProps>`
-  color: ${({ theme, type }) => 
-  type === "GREEN" ? theme.COLORS.GREEN_700 : theme.COLORS.RED_700};
+  color: ${props => props.theme[TITLE_COLOR[props.titleColor]]};
   ${({ theme }) => css`
     font-size: ${theme.FONT_SIZE.XL}px;
     font-family: ${theme.FONT_FAMILY.BOLD};
-  `}
+  `};
 `;
 
 export const Subtitle = styled.Text`

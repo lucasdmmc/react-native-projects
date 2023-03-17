@@ -1,3 +1,4 @@
+import { TouchableOpacity } from "react-native";
 import styled, { css, DefaultTheme } from "styled-components/native";
 
 export const Container = styled.View`
@@ -14,7 +15,7 @@ export const Date = styled.Text`
   `}
 `
 
-export const Meal = styled.View`
+export const Meal = styled(TouchableOpacity)`
   width: 100%;
   height: 49px;
   flex-direction: row;

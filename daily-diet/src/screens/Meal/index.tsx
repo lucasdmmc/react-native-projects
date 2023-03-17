@@ -2,10 +2,18 @@ import { StatusBar } from "react-native";
 import { useTheme } from "styled-components/native";
 import { Button } from "../../components/Button";
 import { MealHeader } from "../../components/MealHeader";
+import { useRoute } from "@react-navigation/native"
+
 import { Container, Content, DateAndTime, DateAndTimeTitle, FoodDescription, FoodName, StatusContainer, StatusText, Status, ButtonContainer } from "./styles";
+import { RouteParams } from "../../components/DayList";
 
 export function Meal() {
   const { COLORS } = useTheme()
+
+  const route = useRoute()
+
+  const { name, date, diet, hour, description } = route.params as RouteParams
+
   return (
     <Container>
       <StatusBar
@@ -17,14 +25,18 @@ export function Meal() {
       <MealHeader title="Refeição"/>
 
       <Content>
-        <FoodName>Sanduíche</FoodName>
-        <FoodDescription>Sanduíche de pão integral com atum e salada de alface e tomate</FoodDescription>
+        <FoodName>{name}</FoodName>
+        <FoodDescription>{description}</FoodDescription>
         <DateAndTimeTitle>Data e hora</DateAndTimeTitle>
-        <DateAndTime>12/08/2022 às 16:00</DateAndTime>
+        <DateAndTime>{date} às {hour}</DateAndTime>
 
         <StatusContainer>
-          <Status statusColor="green"></Status>
-          <StatusText>dentro da dieta</StatusText>
+          {
+            !diet ? 
+            <><Status statusColor="green"></Status><StatusText>dentro da dieta</StatusText></>
+            :
+            <><Status statusColor="red"></Status><StatusText>fora da dieta</StatusText></>
+          }
         </StatusContainer>
         
         <ButtonContainer>

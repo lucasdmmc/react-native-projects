@@ -1,6 +1,7 @@
+import { SafeAreaView } from "react-native-safe-area-context";
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.View`
+export const Container = styled(SafeAreaView)`
   background: ${({ theme }) => theme.COLORS.GRAY_200};
   flex: 1;
 `;
@@ -8,7 +9,6 @@ export const Container = styled.View`
 export const HeaderNewMeal = styled.View`
   flex-direction: row;
   gap: 82px;
-  padding: 24px;
 `;
 
 export const TextNewMeal = styled.Text`
@@ -25,7 +25,6 @@ export const Form = styled.View`
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 16px 24px;
-  border: 1px solid;
 `;
 
 export const Date = styled.View`
