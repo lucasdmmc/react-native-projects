@@ -1,7 +1,7 @@
 import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-google-fonts/nunito-sans';
 import { ActivityIndicator, StatusBar } from 'react-native';
 import { ThemeProvider } from "styled-components"
-import { Home } from './src/screens/Home';
+import { Routes } from './src/routes';
 import theme from './src/theme';
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
         translucent
       />
 
-      { fontsLoaded ? <Home /> : <ActivityIndicator /> }
+      { fontsLoaded ? <Routes /> : <ActivityIndicator /> }
     </ThemeProvider>
   );
 }
