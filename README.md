@@ -14,13 +14,17 @@ Repositório da aplicação: https://github.com/lucasdmmc/react-native-projects/
 
 ![todolist](https://user-images.githubusercontent.com/104842709/224876660-9a0805e6-b7c0-453e-96d8-b81c475ffc8e.png)
 
-### Ignite Teams
 
-![ignite-teams](https://user-images.githubusercontent.com/104842709/224875370-959d4c9a-0640-4872-878b-1492a874862c.png)
+### Ignite Teams
 
 Repositório da aplicação: https://github.com/lucasdmmc/react-native-projects/tree/master/ignite-teams
 
+![ignite-teams](https://user-images.githubusercontent.com/104842709/224875370-959d4c9a-0640-4872-878b-1492a874862c.png)
+
+
 ### Daily Diet
+
+https://github.com/lucasdmmc/react-native-projects/tree/master/daily-diet
 
 `Projeto em desenvolvimento`
 
