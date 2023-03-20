@@ -1,5 +1,6 @@
 import { useNavigation, useRoute } from "@react-navigation/native"
 import { useState, useEffect } from "react"
+import { FlatList } from "react-native";
 import { Button } from "../../components/Button";
 import { DayList, RouteParams } from "../../components/DayList";
 import { Header } from "../../components/Header";
@@ -10,6 +11,8 @@ import { Container, Meals, MealsText } from "./styles";
 export function Home() {
   const { navigate } = useNavigation()
   const [meal, setMeal] = useState({} as RouteParams)
+  const [dayList, setDayList] = useState<RouteParams[]>([])
+  const [newDayList, setNewDayList] = useState()
 
   const route = useRoute();
 
@@ -17,11 +20,15 @@ export function Home() {
     navigate("new")
   }
 
+  function showDayList() {
+    const { name, date, hour, diet, description } = route.params as RouteParams
+    setDayList(state => [...state, { name, date, hour, diet, description }])
+    return
+  }
+
   useEffect(() => {
     if(!route.params) return
-
-    const { name, date, hour, diet, description } = route.params as RouteParams
-    setMeal({ name, date, hour, diet, description })
+    showDayList()
 
   }, [route.params])
   return (
@@ -39,13 +46,21 @@ export function Home() {
         />
       </Meals>
 
-      <DayList
-        name={meal.name} 
-        date={meal.date} 
-        hour={meal.hour} 
-        diet={meal.diet} 
-        description={meal.description}
+      <FlatList 
+        data={dayList}
+        keyExtractor={item => item.name}
+        renderItem={({ item }) => (
+          <DayList
+            name={item.name}
+            date={item.date} 
+            hour={item.hour} 
+            diet={item.diet} 
+            description={item.description}
+          />
+        )}
+        showsVerticalScrollIndicator={false}      
       />
+
     </Container>
   )
 }

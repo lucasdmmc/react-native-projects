@@ -1,6 +1,7 @@
 import { useNavigation } from "@react-navigation/native"
 import { useEffect, useState } from "react";
 import { Button } from "../../components/Button";
+import { RouteParams } from "../../components/DayList";
 import { Filter } from "../../components/Filter";
 import { Input } from "../../components/Input";
 import { MealHeader } from "../../components/MealHeader";
@@ -12,11 +13,14 @@ export function NewMeal() {
   const [date, setDate] = useState("")
   const [hour, setHour] = useState("")
   const [diet, setDiet] = useState(false)
+  const [dayList, setDayList] = useState<RouteParams[]>([])
+
 
   const { navigate } = useNavigation()
 
   function handleNewMeal() {
     navigate("home", { name, description, date, hour, diet})
+    setDayList(state => [...state, { name, description, date, hour, diet }])
 
     navigate("feedback", { diet })
   }
@@ -28,6 +32,8 @@ export function NewMeal() {
       setDiet(true)
     }
   }
+
+  useEffect(() => {}, [dayList])
 
   return (
     <Container>
